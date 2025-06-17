@@ -1,8 +1,8 @@
 const express = require("express");
 
 const router = express.Router();
-const controller = require("../controller/cancel_booking.js");
+const controller = require("../controller/get_seat_layout.js");
 
-router.post("/cancel-booking", controller.cancelBooking);
+router.post("/get-seat-layout", controller.getSeatLayout);
 
 module.exports = router;
