@@ -1,0 +1,9 @@
+export const commonIp = "http://65.0.115.185:8081";
+export const balanceLog = `${commonIp}/bus-api/BalanceLog`;
+export const book = `${commonIp}/bus-api/Book`;
+export const cancelBooking = `${commonIp}/bus-api/cancelbusbooking`;
+export const getBoardPointDetails = `${commonIp}/bus-api/GetBoardingPointDetails`;
+export const getSeatLayout = `${commonIp}/bus-api/GetSeatLayOut`;
+export const search = `${commonIp}/bus-api/search`;
+export const block = `${commonIp}/bus-api/Block`;
+export const balance = `${commonIp}/bus-api/Balance`;
