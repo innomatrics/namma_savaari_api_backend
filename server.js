@@ -18,18 +18,18 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-app.use("/api", cityListRouter);
-app.use("/api", balanceLog);
-app.use("/api", bookBus);
-app.use("/api", cancelBooking);
-app.use("/api", getBoardingPoint);
-app.use("/api", getSeatLayout);
-app.use("/api", search);
-app.use("/api", block);
-app.use("/api", balance);
+app.use("/", cityListRouter);
+app.use("/", balanceLog);
+app.use("/", bookBus);
+app.use("/", cancelBooking);
+app.use("/", getBoardingPoint);
+app.use("/", getSeatLayout);
+app.use("/", search);
+app.use("/", block);
+app.use("/", balance);
 
 app.get("/", (req, res) => {
   res.send("Hello from the proxy server");
 });
-
+app.listen(3000, () => console.log("Proxy server listening on port 3000"));
 module.exports = app;
