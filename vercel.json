@@ -38,6 +38,10 @@
       {
         "src": "/search",
         "dest": "/api/index.js"
+      },
+      {
+        "src" : "/balance",
+        "dest": "/api/index.js"
       }
     ]
   }
