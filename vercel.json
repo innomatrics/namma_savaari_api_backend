@@ -4,15 +4,6 @@
     { "src": "api/index.js", "use": "@vercel/node" }
   ],
   "routes": [
-    { "src": "/search", "dest": "/api/index.js" },
-    { "src": "/city-list", "dest": "/api/index.js" },
-    { "src": "/balance-log", "dest": "/api/index.js" },
-    { "src": "/book", "dest": "/api/index.js" },
-    { "src": "/cancel-booking", "dest": "/api/index.js" },
-    { "src": "/get-boarding-point", "dest": "/api/index.js" },
-    { "src": "/get-seat-layout", "dest": "/api/index.js" },
-    { "src": "/block", "dest": "/api/index.js" },
-    { "src": "/balance", "dest": "/api/index.js" },
-    { "src": "/.*", "dest": "/api/index.js" } 
+    { "src": "/(.*)", "dest": "/api/index.js" }
   ]
 }
