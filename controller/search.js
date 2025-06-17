@@ -1,23 +1,25 @@
-const {search } = require("../global_variable");
+const { search } = require("../global_variable");
 const axios = require("axios");
 
 exports.search = async (req, res) => {
-    const body = req.body;
+  const body = req.body;
 
-    try {
-        const response = await axios.post(search, body,           {
-            headers: {
-              'Content-Type': 'application/json',
-              'Authorization': req.headers['authorization'],
-            }
-          });
+  try {
+    const response = await axios.post(search, body, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': req.headers['authorization'], // Pass this from frontend
+      },
+    });
 
-        res.status(response.status).json(response.data);
-    } catch (error) {
-        res.status(error.response?.status || 500).json({
-            error: 'Proxy failed',
-            backendMessage: error.response?.data || {},
-            details: error.message,
-        })
-    }
-}
+    res.status(response.status).json(response.data);
+  } catch (error) {
+    console.error("Search proxy error:", error?.response?.data || error.message);
+
+    res.status(error.response?.status || 500).json({
+      error: 'Proxy failed',
+      backendMessage: error.response?.data || {},
+      details: error.message,
+    });
+  }
+};
