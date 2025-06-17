@@ -8,7 +8,7 @@ exports.search = async (req, res) => {
     const response = await axios.post(search, body, {
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': req.headers['authorization'], // Pass this from frontend
+        'Authorization': req.headers['api-token'], 
       },
     });
 

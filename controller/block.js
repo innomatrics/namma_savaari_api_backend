@@ -8,7 +8,7 @@ exports.block = async (req, res) => {
         const response = await axios.post(block, body,           {
             headers: {
               'Content-Type': 'application/json',
-              'Authorization': req.headers['authorization'],
+              'Authorization': req.headers['api-token'],
             }
           });
 

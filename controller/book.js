@@ -8,7 +8,7 @@ exports.bookBus = async (req, res) => {
         const response = await axios.post(book, body,           {
             headers: {
               'Content-Type': 'application/json',
-              'Authorization': req.headers['authorization'],
+              'Authorization': req.headers['api-token'],
             }
           });
 

@@ -8,7 +8,7 @@ exports.cancelBooking = async (req, res) => {
         const response = await axios.post(cancelBooking, body,           {
             headers: {
               'Content-Type': 'application/json',
-              'Authorization': req.headers['authorization'],
+              'Authorization': req.headers['api-token'],
             }
           });
 

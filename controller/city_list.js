@@ -8,7 +8,7 @@ exports.cityList = async (req, res) => {
           {
             headers: {
               'Content-Type': 'application/json',
-              'Authorization': req.headers['authorization'],
+              'Authorization': req.headers['api-token'],
             }
           }
         );

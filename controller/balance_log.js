@@ -8,7 +8,7 @@ exports.balanceLog = async (req, res) => {
         const response = await axios.post(balanceLog, body,           {
             headers: {
               'Content-Type': 'application/json',
-              'Authorization': req.headers['authorization'],
+              'Authorization': req.headers['api-token'],
             }
           });
 

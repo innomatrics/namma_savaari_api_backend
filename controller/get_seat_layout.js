@@ -8,7 +8,7 @@ exports.getSeatLayout = async (req, res) => {
         const response = await axios.post(getSeatLayout, body, {
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': req.headers['authorization'],
+                'Authorization': req.headers['api-token'],
             }
         });
 
