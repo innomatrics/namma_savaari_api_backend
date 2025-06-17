@@ -1,8 +1,8 @@
 const express = require('express');
 
 const router = express.Router();
-const controller = require('../controller/block');
+const controller = require('../controller/balance');
 
-router.post("/block", controller.block);
+router.post("/balance", controller.balance);
 
 module.exports = router;
