@@ -7,6 +7,10 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+app.get("/", (req, res) => {
+  res.send("Hello from the proxy server");
+});
+
 app.post('/city-list', async (req, res) => {
   try {
     const backendResponse = await axios.post(
@@ -15,7 +19,7 @@ app.post('/city-list', async (req, res) => {
       {
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': req.headers['authorization'], // optional token
+          'Authorization': req.headers['authorization'],
         }
       }
     );
